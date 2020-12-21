@@ -1,0 +1,32 @@
+<html>
+<style>
+body {
+ background-image: url("tenor.gif");
+ background-repeat: no-repeat;
+ background-color: #cccccc;
+ background-position: center;
+}
+</style>
+<body>
+
+<script>
+
+var x = -1;
+const body = document.body;
+
+function move() {
+	if (x > window.innerWidth) x = -5;
+	body.style.backgroundPosition = `${x}px 0`;
+	// body.style.backgroundPosition = `${x}px ${x}px`;
+	x += 30;
+	// console.log(x);
+	setTimeout(function() {
+		move();
+	}, 500);
+}
+
+move();
+</script>
+</body>
+
+</html>
